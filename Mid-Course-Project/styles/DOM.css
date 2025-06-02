@@ -1,0 +1,31 @@
+ .sub-button{
+            margin-bottom: 50px;
+            font-size: 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 7px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        .is-subscribed{
+            background-color: gray;
+            color: black;
+        }
+        .rps-link{
+            margin-bottom: 50px;
+        }
+        body{
+            font-family: Arial;
+        }
+
+        .calc-button, .js-cost-input{
+            font-size: 17px;
+            padding: 10px 15px;
+        }
+        .calc-button{
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }

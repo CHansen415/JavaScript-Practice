@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <button>hello</button>
+
+    <script>
+        document.title = 'DOMINATION'; // changes title of the webpage
+        //document.body can access the <body> of the html code
+        //document.querySelector() takes any element in the page and puts it in the JS
+        console.log(document.querySelector('button'));
+        //adding .innerHTML to ^ would just print hello 
+        console.log(document.querySelector('button').innerHTML = 'Changed');
+    </script>
+</body>
+</html>
