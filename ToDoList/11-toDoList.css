@@ -1,0 +1,36 @@
+.js-display-items{
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    column-gap: 10px;
+    row-gap: 5px;
+    align-items: center;
+}
+
+.input-line{
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    margin-bottom: 5px;
+    column-gap: 10px;
+    
+}
+
+.js-add-button{
+    background-color: green;
+    color: white;
+    border: none;   
+    cursor: pointer;
+}
+
+.delete-button{
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.js-add{
+    font-size: 18px;
+    padding: 5px;
+}
