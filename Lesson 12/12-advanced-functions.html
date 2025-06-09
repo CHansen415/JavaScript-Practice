@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced functions</title>
+</head>
+<body>
+    <script>
+        const func = function(){ //anonymous function 
+            alert('Greetings');
+        }
+        func();
+
+        const obj1 = {
+            num: 2,
+            fun: function(){
+                console.log('hello this is from an object method');
+            }
+        } // this is an example of an object method
+
+
+        obj1.fun();
+
+        //you can pass other functions into each other as parameters
+        function run(param){
+            param();    
+        }
+
+        run(function(){
+            console.log('Function inception!'); //the call back functions
+        });
+
+        //setTimeout() // built in function that takes a function in the first parameter and then an amount of time in the second parameter
+        //setInterval() // runs the function repeatedly after a given period of time
+
+
+        [
+            'item 1',
+            'item 2',
+            'item 3'
+        ].forEach(function(param){
+            console.log(param);
+        });
+    </script>
+</body>
+</html>
