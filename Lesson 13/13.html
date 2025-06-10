@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 13 Practice</title>
+    <style>
+       .added-pop-up{
+        opacity: 0;
+        transition: opacity .5s;
+       } 
+       .popup-show{
+        opacity: 1;
+       }
+
+       .remove-pop-up{
+        opacity: 0;
+        transition: opacity .3s;
+       }
+
+       .remove-show{
+        opacity: 1;
+       }
+
+    </style>
+</head>
+<body>
+    <select class = "select-drop-down js-select">
+        <option selected value="1">1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+
+    </select>
+    <button class = "js-add-to-cart">Add to Cart</button>
+    <p class = "added-pop-up">Added</p>
+
+    <p class = "cart-quantity"></p> 
+    <br>
+    <p>Remove Items</p>
+    <select class = "js-amount-to-remove">
+        <option selected value = "1">1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+    </select>
+    <button class = "js-remove-from-cart">Remove</button>
+    <p class = "remove-pop-up">Removed from cart</p>
+    
+    <button class = "js-clear-cart">Clear Cart</button>
+
+    <script>
+        let cartQuantity = 0;
+        document.querySelector('.cart-quantity').innerHTML = `Cart Quantity: ${cartQuantity}`;
+
+        const buttonElement = document.querySelector('.js-add-to-cart');
+        buttonElement.addEventListener('click', () =>{
+            const addAmount = document.querySelector('.js-select');
+            cartQuantity += Number(addAmount.value);
+            document.querySelector('.cart-quantity').innerHTML = `Cart Quantity: ${cartQuantity}`;
+
+            const addedElement = document.querySelector('.added-pop-up');
+            addedElement.classList.add('popup-show');
+
+            setTimeout(()=>{
+                addedElement.classList.remove('popup-show');
+            }, 1000);
+
+       });  
+       
+       const removeElement = document.querySelector('.js-remove-from-cart');
+       removeElement.addEventListener('click', ()=>{
+        const numToRemove = document.querySelector('.js-amount-to-remove');
+        if(cartQuantity < Number(numToRemove.value)){
+            return;
+        }
+        cartQuantity -= Number(numToRemove.value);
+        document.querySelector('.cart-quantity').innerHTML = `Cart Quantity: ${cartQuantity}`;
+
+        const removed = document.querySelector('.remove-pop-up');
+        removed.classList.add('remove-show');
+
+        setTimeout(()=>{
+            removed.classList.remove('remove-show');
+        }, 1000);
+       });
+    
+       const clearCart = document.querySelector('.js-clear-cart');
+       clearCart.addEventListener('click', ()=>{
+        cartQuantity = 0;
+        document.querySelector('.cart-quantity').innerHTML = `Cart Quantity: ${cartQuantity}`;
+       });
+    </script>
+</body>
+</html>
