@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 12 Prace</title>
+</head>
+<body>
+    <button class = "js-button">Click</button>
+    
+
+    <script>
+        const buttonElement = document.querySelector('.js-button');
+
+        //addEventListener runs code when an element is interacted with
+        buttonElement.addEventListener('click', () => {
+            console.log('hello');
+        });
+        //param 1 is event (type of interaction)
+        //param 2 is function that will run when event happens
+        //addEventListener allows us to have an element trigger based on multiple events
+
+        document.body.addEventListener('keydown', (event) => {
+            console.log(`You just pressed the ${event.key} button`);
+        }
+    )
+    </script>
+</body>
+</html>

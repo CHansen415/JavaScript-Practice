@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Functions Pt.2 </title>
+</head>
+<body>
+    
+    <script>
+        const arrowFunction = () => {
+            console.log('hello');
+        }
+
+        arrowFunction();
+
+        const function2 = (param) => {
+            console.log(`${param}`);
+        }
+        function2(6);
+
+        const oneLine = () => 1+2;
+
+        console.log(oneLine());
+
+        
+        [
+            'item 1',
+            'item 2',
+            'item 3'
+        ].forEach((param) => {
+            console.log(param);
+        });
+
+
+        //short hand method syntax
+        // this is better practice
+        obj1 = {
+            method1: () => {
+                return 1+2;
+            },
+
+            method2: () => {
+                return 2*2;
+            }
+        }
+
+        console.log(obj1.method1());
+        console.log(obj1.method2());
+    </script>
+</body>
+</html>
